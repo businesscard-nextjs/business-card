@@ -18,22 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="w-full bg-header">
-          <nav>
-            <ul className="flex space-x-2">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/sample" replace>
-                  Sample
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
         <main>{children}</main>
-        <footer className="w-full bg-footer">Footer</footer>
       </body>
     </html>
   );
