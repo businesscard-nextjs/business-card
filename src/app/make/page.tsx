@@ -3,9 +3,9 @@ import React from "react";
 
 function page() {
   return (
-    <main className="w-screen min-h-screen flex">
+    <div className="w-screen min-h-screen flex">
       <LeftContainer />
-    </main>
+    </div>
   );
 }
 

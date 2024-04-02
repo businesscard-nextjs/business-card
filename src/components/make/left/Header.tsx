@@ -1,11 +1,10 @@
 import { ChildProps } from "postcss";
 import React from "react";
+import BoxLayout from "./BoxLayout";
 
 function Header(props: ChildProps) {
   return (
-    <header className="w-[80%] bg-[#936E6E] text-white mx-auto my-[40px] p-4 text-xl text-center align-middle">
-      헤더로고
-    </header>
+    <BoxLayout bgColor="#936E6E" margin="40px"> 헤더 로고 및 어쩌구</BoxLayout>
   );
 }
 
