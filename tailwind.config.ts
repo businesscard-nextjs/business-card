@@ -28,11 +28,11 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      xxl: { max: "1400px" },
-      xl: { max: "980px" },
-      lg: { max: "800px" },
-      md: { max: "680px" },
-      sm: { max: "430px" },
+      xxl: { max: "1600px" }, // laptop
+      xl: { max: "1024px" }, // pad -
+      lg: { max: "834px" }, // pad |
+      md: { max: "768px" }, // phone -
+      sm: { max: "480px" }, // phone |
     },
     colors: {
       // primary
@@ -55,7 +55,7 @@ const config: Config = {
       sample: ["Spoqa Han Sans Neo", "sans-serif"],
     },
     backgroundImage: {
-      // sample: "url(../assets/icons/arrow/ico_arrow_down.svg)",
+      landing: "url(../../public/landing_bg_m.svg)",
     },
     boxShadow: {
       sample: "0px 0px 16px 0px rgba(0, 0, 0, 0.10)",
