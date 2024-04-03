@@ -1,10 +1,12 @@
 import LeftContainer from "@/src/components/make/left/LeftContainer";
+import RightContainer from "@/src/containers/make/RightContainer";
 import React from "react";
 
 function page() {
   return (
-    <div className="w-screen min-h-screen flex">
+    <div className="flex min-h-screen w-screen">
       <LeftContainer />
+      <RightContainer />
     </div>
   );
 }

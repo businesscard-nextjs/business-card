@@ -75,18 +75,22 @@ body {
 
 /*button-status*/
 .button.default {
-  @apply border-main3 border bg-white text-white;
+  @apply border border-main3 bg-white text-white;
 }
 .button.unactive {
-  @apply text-gray2 border-gray2 border bg-white;
+  @apply border border-gray2 bg-white text-gray2;
 }
 .button.active {
   @apply bg-main3 text-white;
 }
 .button.disabled {
-  @apply bg-gray1 text-gray2 cursor-default;
+  @apply cursor-default bg-gray1 text-gray2;
 }
 
 .button.hover {
-  @apply hover:text-main3 hover:border hover:bg-white;
+  @apply hover:border hover:bg-white hover:text-main3;
+}
+
+.button.hover-img {
+  @apply hover:border hover:bg-main2 hover:text-main3;
 }
