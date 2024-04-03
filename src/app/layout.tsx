@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import "@/src/styles/globals.css";
+import RecoilRootProvider from "./RecoilRootProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,22 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="w-full bg-header">
-          <nav>
-            <ul className="flex space-x-2">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/sample" replace>
-                  Sample
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <main>{children}</main>
-        <footer className="w-full bg-footer">Footer</footer>
+        <RecoilRootProvider>
+          <main>{children}</main>
+        </RecoilRootProvider>
       </body>
     </html>
   );
