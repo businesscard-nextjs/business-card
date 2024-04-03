@@ -58,7 +58,7 @@ const config: Config = {
       landing: "url(../../public/landing_bg_m.svg)",
     },
     boxShadow: {
-      sample: "0px 0px 16px 0px rgba(0, 0, 0, 0.10)",
+      card: "-4px 10px 40px 10px rgba(0, 0, 0, 0.10)",
     },
     extend: {
       fontSize: px0_100,
@@ -75,6 +75,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
 export default config;

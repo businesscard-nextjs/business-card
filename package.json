@@ -13,7 +13,9 @@
     "antd": "^5.16.0",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "@tailwindcss/aspect-ratio": "^0.4.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -33,7 +35,6 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.13",
     "recoil": "^0.7.7",
-    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "^3.4.3",
     "typescript": "^5"
   }

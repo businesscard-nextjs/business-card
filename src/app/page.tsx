@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import BusinessCardFront from "../components/landing/BusinessCardFront";
+import BusinessCardBack from "../components/landing/BusinessCardBack";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen w-full md:flex-col">
       {/* left */}
       <div className="bg-main1 md:bg-landing md:object-fit flex flex-[1.5_1.5_0%] flex-col items-center justify-center gap-80 p-30 md:bg-cover">
+        <BusinessCardFront />
+        <BusinessCardBack />
         <Image
           src="/Bmaker_Logo.svg"
           alt="Bmarker Logo"
