@@ -1,5 +1,7 @@
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
 
 :root {
@@ -30,4 +32,48 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/**
+ * button
+ **/
+.button {
+  @apply flex cursor-pointer items-center justify-center rounded-8;
+}
+
+/*button-size*/
+.button.large {
+  @apply h-[60px] px-32 text-24;
+}
+
+.button.big {
+  @apply h-[52px] px-28 text-18;
+}
+
+.button.medium {
+  @apply h-[48px] px-24 text-16;
+}
+
+.button.small {
+  @apply h-[40px] px-20 text-14;
+}
+
+/*button-type*/
+
+/*button-status*/
+.button.default {
+  @apply border-main3 border bg-white text-white;
+}
+.button.unactive {
+  @apply text-gray2 border-gray2 border bg-white;
+}
+.button.active {
+  @apply bg-main3 text-white;
+}
+.button.disabled {
+  @apply bg-gray1 text-gray2 cursor-default;
+}
+
+.button.hover {
+  @apply hover:text-main3 hover:border hover:bg-white;
 }

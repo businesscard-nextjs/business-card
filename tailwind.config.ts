@@ -35,8 +35,19 @@ const config: Config = {
       sm: { max: "430px" },
     },
     colors: {
+      // primary
+      main1: "#FDF2DD",
+      main2: "#E6842D",
+      main3: "#130912",
+
+      // basic
       white: "#FFFFFF",
       black: "#000000",
+
+      // gray
+      gray1: "#EEEEEE",
+      gray2: "#CBCBCB",
+
       header: "#488BB1",
       footer: "#4AB148",
     },
@@ -64,6 +75,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
 export default config;
