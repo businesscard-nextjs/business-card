@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Button } from "antd";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,9 +15,12 @@ export default function Home() {
           height={260}
           priority
         />
-        <div className="button active big hover w-full max-w-[240px] font-semibold">
+        <Link
+          href="make"
+          className="button active big hover w-full max-w-[240px] font-semibold"
+        >
           Start
-        </div>
+        </Link>
       </div>
       <div className="relative flex w-full flex-[3_3_0%] bg-[#F1E8D6]">
         <Image
