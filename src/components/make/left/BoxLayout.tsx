@@ -9,7 +9,8 @@ type boxProps = {
 function BoxLayout({ children, bgColor, margin }: PropsWithChildren<boxProps>) {
   return (
     <div
-      className={`w-[80%] bg-[${bgColor}] flex justify-around items-center text-white mx-auto my-[${margin}] p-4`}
+      className={`w-[80%] flex justify-around items-center text-white mx-auto p-4`}
+      style={{ backgroundColor: bgColor, margin }}
     >
       {children}
     </div>

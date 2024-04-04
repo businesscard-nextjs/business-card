@@ -1,42 +1,52 @@
 "use client";
-import React, { Children, MouseEventHandler, useState } from "react";
+import React, { Children, MouseEventHandler, useEffect, useState } from "react";
 import BoxLayout from "./BoxLayout";
 import ElementBox from "./ElementBox";
+import { useRecoilState } from "recoil";
+import { iElement, rc_elementList } from "./leftAtom";
 
 function ElementPicker() {
-  const elementList: string[] = [
-    "name",
-    "address",
-    "company name",
-    "phone",
-    "office name",
-    "직책",
-    "fax",
-    "email",
+  const elementList: iElement[] = [
+    { label: "name", text: "", isColorPicker: false },
+    { label: "background", text: "", isColorPicker: true },
+    { label: "address", text: "", isColorPicker: false },
+    { label: "company name", text: "", isColorPicker: false },
+    { label: "phone", text: "", isColorPicker: false },
+    { label: "office name", text: "", isColorPicker: false },
+    { label: "직책", text: "", isColorPicker: false },
+    { label: "fax", text: "", isColorPicker: false },
+    { label: "email", text: "", isColorPicker: false },
   ];
-  const [picked, setPicked] = useState([] as any);
+  const [picked, setPicked] = useRecoilState<iElement[]>(rc_elementList);
 
-  const putElement = (element: string) => {
-    setPicked((p: any) =>
-      picked.includes(p)
-        ? picked.filter((ele: string) => {
-            return ele !== element;
-          })
-        : [...picked, element],
-    );
+  const putElement = (element: iElement) => {
+    setPicked((prevPicked) => {
+      if (prevPicked.some((picked) => picked.label === element.label)) {
+        return prevPicked.filter(
+          (picked: iElement) => picked.label !== element.label,
+        );
+      } else {
+        return [...prevPicked, element];
+      }
+    });
+  };
+
+  const hasElementInPickedList = (element: iElement) => {
+    return picked.some((p) => p.label === element.label);
   };
 
   return (
     <BoxLayout bgColor="#fff" margin="40px">
-      <div className="w-full grid grid-cols-4 grid-rows-2">
-        {elementList.map((element: string) => {
+      <div className="w-full grid grid-cols-4 grid-rows-2 gap-2">
+        {elementList.map((element: iElement) => {
           return (
             <ElementBox
-              textColor={!!picked.includes(element) ? "#000" : "#fff"}
+              key={element.label}
+              textColor={hasElementInPickedList(element) ? "#fff" : "#000"}
               onClick={() => putElement(element)}
-              bgColor={!!picked.includes(element) ? "#fff" : "#999"}
+              bgColor={hasElementInPickedList(element) ? "#E77917" : "#fff"}
             >
-              {element}
+              {element.label}
             </ElementBox>
           );
         })}
