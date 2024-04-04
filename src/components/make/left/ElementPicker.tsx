@@ -7,15 +7,15 @@ import { iElement, rc_elementList } from "./leftAtom";
 
 function ElementPicker() {
   const elementList: iElement[] = [
-    { label: "name", text: "", isColorPicker: false },
-    { label: "background", text: "", isColorPicker: true },
-    { label: "address", text: "", isColorPicker: false },
-    { label: "company name", text: "", isColorPicker: false },
-    { label: "phone", text: "", isColorPicker: false },
-    { label: "office name", text: "", isColorPicker: false },
-    { label: "position", text: "", isColorPicker: false },
-    { label: "fax", text: "", isColorPicker: false },
-    { label: "email", text: "", isColorPicker: false },
+    { label: "name", text: "", color: "#000" },
+    { label: "background", text: "", color: "#000" },
+    { label: "address", text: "", color: "#000" },
+    { label: "company name", text: "", color: "#000" },
+    { label: "phone", text: "", color: "#000" },
+    { label: "office name", text: "", color: "#000" },
+    { label: "position", text: "", color: "#000" },
+    { label: "fax", text: "", color: "#000" },
+    { label: "email", text: "", color: "#000" },
   ];
   const [picked, setPicked] = useRecoilState<iElement[]>(rc_elementList);
 
@@ -37,7 +37,7 @@ function ElementPicker() {
 
   return (
     <BoxLayout bgColor="#fff" margin="40px">
-      <div className="w-full grid grid-cols-3 grid-rows-3 gap-2">
+      <div className="w-full grid grid-cols-3 grid-rows-16 gap-16">
         {elementList.map((element: iElement) => {
           return (
             <ElementBox

@@ -18,10 +18,10 @@ function SizeDecideBox() {
       <span className="text-black">Card Direction</span>
       <Radio.Group onChange={onChange} defaultValue="Vertical">
         <Radio checked value="Vertical">
-          <span className="text-[#000] p-2">Vertical</span>
+          <span className="text-[#000] p-16">Vertical</span>
         </Radio>
         <Radio value="Horizonal">
-          <span className="text-[#000] p-2">Horizonal</span>
+          <span className="text-[#000] p-16">Horizonal</span>
         </Radio>
       </Radio.Group>
     </BoxLayout>
