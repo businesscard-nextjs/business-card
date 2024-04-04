@@ -2,9 +2,15 @@
 
 import Image from "next/image";
 
-export default function BCardWFront() {
+interface PropsType {
+  getRef?: React.RefObject<HTMLDivElement>;
+}
+const BCardWFront = ({ getRef }: PropsType) => {
   return (
-    <div className="flex aspect-[6/3.4]  w-[500px] bg-white px-20 py-30 shadow-card">
+    <div
+      ref={getRef}
+      className="flex aspect-[6/3.4]  w-[500px] bg-white px-20 py-30 shadow-card"
+    >
       {/* logo */}
       <div className="flex w-full flex-1 items-center justify-center">
         <Image
@@ -19,15 +25,17 @@ export default function BCardWFront() {
       {/* info */}
       <div className="flex w-full flex-1 flex-col justify-between p-10">
         <div className="flex flex-col gap-2">
-          <div className="text-2xl font-semibold">Choi Jeongwon</div>
-          <div className="text-base">Frontend Developer</div>
+          <div className="text-24 font-semibold">Choi Jeongwon</div>
+          <div className="text-16">Frontend Developer</div>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="text-lg">T. 010-5288-7462</div>
-          <div className="text-lg">A. Moraene-ro, 3 gil 11</div>
-          <div className="text-lg">E. jungwon0508@naver.com</div>
+          <div className="text-16">T. 010-5288-7462</div>
+          <div className="text-16">A. Moraene-ro, 3 gil 11</div>
+          <div className="text-16">E. jungwon0508@naver.com</div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default BCardWFront;

@@ -17,12 +17,6 @@ export default function LandingRight() {
           width={400}
           height={0}
         />
-        <Image
-          src="/images/business-card-back.svg"
-          alt="business-card-back"
-          width={400}
-          height={0}
-        />
       </div>
       <div className="flex -rotate-[30deg] gap-50">
         <Image
@@ -45,7 +39,7 @@ export default function LandingRight() {
           height={0}
         />
       </div>
-      <div className="flex -rotate-[30deg]  gap-50">
+      <div className="flex -rotate-[30deg] gap-50">
         <Image
           src="/images/business-card-back.svg"
           alt="business-card-back"
@@ -65,8 +59,20 @@ export default function LandingRight() {
           width={400}
           height={0}
         />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
       </div>
-      <div className="flex -rotate-[30deg]  gap-50">
+      <div className="flex -rotate-[30deg] gap-50">
         <Image
           src="/images/business-card-back.svg"
           alt="business-card-back"
@@ -80,13 +86,25 @@ export default function LandingRight() {
           height={0}
         />
         <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
           src="/images/business-card-front.svg"
           alt="business-card-back"
           width={400}
           height={0}
         />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
       </div>
-      <div className="flex -rotate-[30deg]  gap-50">
+      <div className="flex -rotate-[30deg] gap-50">
         <Image
           src="/images/business-card-front.svg"
           alt="business_card"
@@ -102,6 +120,82 @@ export default function LandingRight() {
         <Image
           src="/images/business-card-front.svg"
           alt="business_card"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+      </div>{" "}
+      <div className="flex -rotate-[30deg] gap-50">
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+      </div>
+      <div className="flex -rotate-[30deg] gap-50">
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
           width={400}
           height={0}
         />
