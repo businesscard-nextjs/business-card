@@ -11,3 +11,8 @@ export const rc_elementList = atom<iElement[]>({
     { label: "address", text: "", isColorPicker: false },
   ],
 });
+
+export const rc_direction = atom<string>({
+  key: "rc_direction",
+  default: "vertical",
+});

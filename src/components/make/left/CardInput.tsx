@@ -1,16 +1,31 @@
 "use client";
-import { ColorPicker } from "antd";
+import { ColorPicker, ColorPickerProps, GetProp } from "antd";
 import React, { useState } from "react";
+import { useRecoilState } from "recoil";
+import { iElement, rc_elementList } from "./leftAtom";
 
-type inputLable = {
+type inputLabel = {
   label: string;
+  text: string;
   isColorPicker: boolean;
 };
 
-function CardInput({ label, isColorPicker }: inputLable) {
-  const [input, setInput] = useState<string>();
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
+type Color = GetProp<ColorPickerProps, "value">;
+
+function CardInput({ label, text, isColorPicker }: inputLabel) {
+  const [elementList, setElementList] =
+    useRecoilState<iElement[]>(rc_elementList);
+
+  const [color, setColor] = useState<Color>("#E77917");
+  const [input, setInput] = useState(text);
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(event.target.value);
+    setElementList((prev: any) => {
+      return prev.map((e: iElement) => {
+        return e.label === label ? { ...e, text: event.target.value } : e;
+      });
+    });
   };
 
   return (
@@ -23,7 +38,7 @@ function CardInput({ label, isColorPicker }: inputLable) {
           className="w-[70%] p-1 text-black"
         />
       ) : (
-        <ColorPicker />
+        <ColorPicker value={color} onChange={setColor} />
       )}
     </div>
   );

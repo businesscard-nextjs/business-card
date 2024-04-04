@@ -12,7 +12,11 @@ function ElementInput(props: Props) {
       className={`w-[80%] h-[36vh] flex flex-col justify-start items-center text-white mx-[40px] my-[20px] p-4 overflow-auto`}
     >
       {elementList.map((e) => (
-        <CardInput label={e.label} isColorPicker={e.isColorPicker} />
+        <CardInput
+          text={e.text}
+          label={e.label}
+          isColorPicker={e.isColorPicker}
+        />
       ))}
     </div>
   );
