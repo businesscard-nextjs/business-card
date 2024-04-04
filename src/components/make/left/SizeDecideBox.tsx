@@ -16,12 +16,12 @@ function SizeDecideBox() {
   return (
     <BoxLayout margin="0 40px" bgColor="#fff">
       <span className="text-black">Card Direction</span>
-      <Radio.Group onChange={onChange} defaultValue="Vertical">
-        <Radio checked value="Vertical">
-          <span className="text-[#000] p-16">Vertical</span>
+      <Radio.Group onChange={onChange} defaultValue="vertical">
+        <Radio checked value="vertical">
+          <span className="p-16 text-[#000]">Vertical</span>
         </Radio>
-        <Radio value="Horizonal">
-          <span className="text-[#000] p-16">Horizonal</span>
+        <Radio value="horizonal">
+          <span className="p-16 text-[#000]">Horizonal</span>
         </Radio>
       </Radio.Group>
     </BoxLayout>

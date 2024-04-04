@@ -4,13 +4,16 @@ import DownloadIcon from "@/src/components/icons/DownloadIcon";
 import BCardWFront from "@/src/components/landing/BCardWFront";
 import BCardLFront from "@/src/components/landing/BCardLFront";
 import BCardLBack from "@/src/components/landing/BCardLBack";
-import Image from "next/image";
 
+import { useRecoilValue } from "recoil";
+import { rc_direction } from "@/src/components/make/left/leftAtom";
 import React, { useCallback, useRef } from "react";
 import { toPng } from "html-to-image";
 
 export default function RightContainer() {
   const ref = useRef<HTMLDivElement>(null);
+
+  const getCardDirection = useRecoilValue(rc_direction);
 
   //image download function
   const downloadImage = useCallback(() => {
@@ -32,14 +35,15 @@ export default function RightContainer() {
 
   return (
     <div className="relative flex w-full flex-1 items-center justify-center p-30">
-      <div className="flex w-[80%] items-center justify-center">
-        <BCardWFront getRef={ref} />
-      </div>
-      {/* <div className="flex w-full max-w-[360px] items-center justify-center">
-        <BCardLFront />
-        <BCardLBack />
-      </div> */}
-
+      {getCardDirection === "vertical" ? (
+        <div className="flex w-[80%] items-center justify-center">
+          <BCardWFront getRef={ref} />
+        </div>
+      ) : (
+        <div className="flex w-full max-w-[360px] items-center justify-center">
+          <BCardLFront />
+        </div>
+      )}
       <div
         className="button active big hover absolute bottom-[30px] right-[50px] w-full max-w-[180px] items-center gap-4"
         onClick={downloadImage}

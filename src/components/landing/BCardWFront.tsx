@@ -2,14 +2,21 @@
 
 import Image from "next/image";
 
+import { useRecoilValue } from "recoil";
+import { rc_elementList } from "@/src/components/make/left/leftAtom";
+
 interface PropsType {
   getRef?: React.RefObject<HTMLDivElement>;
 }
+
 const BCardWFront = ({ getRef }: PropsType) => {
+  const getCardInfo = useRecoilValue(rc_elementList);
+  console.log("getCardInfo", getCardInfo);
+
   return (
     <div
       ref={getRef}
-      className="flex aspect-[6/3.4]  w-[500px] bg-white px-20 py-30 shadow-card"
+      className="flex aspect-[6/3.4] w-[500px] bg-white px-20 py-30 shadow-card"
     >
       {/* logo */}
       <div className="flex w-full flex-1 items-center justify-center">
@@ -24,15 +31,19 @@ const BCardWFront = ({ getRef }: PropsType) => {
       </div>
       {/* info */}
       <div className="flex w-full flex-1 flex-col justify-between p-10">
-        <div className="flex flex-col gap-2">
-          <div className="text-24 font-semibold">Choi Jeongwon</div>
-          <div className="text-16">Frontend Developer</div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <div className="text-16">T. 010-5288-7462</div>
-          <div className="text-16">A. Moraene-ro, 3 gil 11</div>
-          <div className="text-16">E. jungwon0508@naver.com</div>
-        </div>
+        {getCardInfo.map((e, i) => (
+          <>
+            <div className="flex flex-col gap-2">
+              <div className="text-24 font-semibold">Choi Jeongwon</div>
+              <div className="text-16">Frontend Developer</div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <div className="text-16">T. 010-5288-7462</div>
+              <div className="text-16">A. Moraene-ro, 3 gil 11</div>
+              <div className="text-16">E. jungwon0508@naver.com</div>
+            </div>
+          </>
+        ))}
       </div>
     </div>
   );
