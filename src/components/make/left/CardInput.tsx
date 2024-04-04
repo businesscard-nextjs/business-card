@@ -83,10 +83,14 @@ function CardInput({ label, text, color }: inputLabel) {
   const onColorChange = (event: ColorPickerProps["value"]) => {
     setElementList((prev: any) => {
       return prev.map((e: iElement) => {
-        return e.label === label ? { ...e, color: event?.toHexString() } : e;
+        return e.label === label ? { ...e, color: event } : e;
       });
     });
   };
+
+  useEffect(() => {
+    console.log(elementList[0].color);
+  }, [elementList]);
 
   return (
     <div className="my-1 flex w-full justify-between">
