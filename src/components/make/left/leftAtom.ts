@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import background from "@/public/landing_bg.svg"
+import background from "@/public/images/landing_bg.svg";
 export interface iElement {
   label: string;
   text: string;
@@ -21,4 +21,4 @@ export const rc_direction = atom<string>({
 export const rc_imageFile = atom<File>({
   key: "rc_image_file",
   default: background,
-})
+});
