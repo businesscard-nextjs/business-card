@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-export default function BusinessCardBack() {
+export default function BCardWBack() {
   return (
-    <div className="bg-main2 shadow-card flex aspect-[6/3.4] w-full items-center justify-center px-20 py-30 ">
+    <div className="flex aspect-[6/3.4] w-full items-center justify-center bg-main2 px-20 py-30 shadow-card ">
       {/* logo */}
       <Image
         src="/Bmaker_Logo_w.svg"

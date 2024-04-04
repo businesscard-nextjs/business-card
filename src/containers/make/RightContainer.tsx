@@ -1,6 +1,7 @@
 import DownloadIcon from "@/src/components/icons/DownloadIcon";
 import BCardWFront from "@/src/components/landing/BCardWFront";
 import BCardLFront from "@/src/components/landing/BCardLFront";
+import BCardLBack from "@/src/components/landing/BCardLBack";
 
 export default function RightContainer() {
   return (
@@ -9,7 +10,8 @@ export default function RightContainer() {
       <BCardWFront />
       </div> */}
       <div className="flex w-full max-w-[360px] items-center justify-center">
-        <BCardLFront />
+        {/* <BCardLFront /> */}
+        <BCardLBack />
       </div>
 
       <div className="button active big hover absolute bottom-[30px] right-[50px] w-full max-w-[180px] items-center gap-4">

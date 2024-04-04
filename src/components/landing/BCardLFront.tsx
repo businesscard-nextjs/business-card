@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function BusinessCardFront() {
+export default function BCardLFront() {
   return (
     <div className="flex aspect-[3.4/6] w-[80%] flex-col bg-white px-30 py-20 shadow-card">
       {/* logo */}
