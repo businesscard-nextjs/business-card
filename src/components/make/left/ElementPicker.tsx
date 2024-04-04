@@ -13,7 +13,7 @@ function ElementPicker() {
     { label: "company name", text: "", isColorPicker: false },
     { label: "phone", text: "", isColorPicker: false },
     { label: "office name", text: "", isColorPicker: false },
-    { label: "직책", text: "", isColorPicker: false },
+    { label: "position", text: "", isColorPicker: false },
     { label: "fax", text: "", isColorPicker: false },
     { label: "email", text: "", isColorPicker: false },
   ];
