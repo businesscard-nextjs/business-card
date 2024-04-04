@@ -4,7 +4,9 @@ import BoxLayout from "./BoxLayout";
 
 function Header(props: ChildProps) {
   return (
-    <BoxLayout bgColor="#936E6E" margin="40px"> 헤더 로고 및 어쩌구</BoxLayout>
+    <BoxLayout bgColor="#130912" margin="0px auto 20px">
+      Let's generate your own business card !
+    </BoxLayout>
   );
 }
 

@@ -3,9 +3,11 @@
 import { Radio, RadioChangeEvent } from "antd";
 import React, { useState } from "react";
 import BoxLayout from "./BoxLayout";
+import { useRecoilState } from "recoil";
+import { rc_direction } from "./leftAtom";
 
 function SizeDecideBox() {
-  const [value, setValue] = useState("세로");
+  const [value, setValue] = useRecoilState(rc_direction);
 
   const onChange = (e: RadioChangeEvent) => {
     setValue(e.target.value);
@@ -13,18 +15,14 @@ function SizeDecideBox() {
 
   return (
     <BoxLayout margin="0 40px" bgColor="#fff">
-      <span className="text-[#000]">명함 방향은 {value}로 할게요</span>
-      <Radio.Group onChange={onChange}>
-        <div className="flex justify-center items-center">
-          <Radio defaultChecked value="세로">
-            <span className="text-[#000] after:content-['세로'] p-2"></span>
-          </Radio>
-        </div>
-        <div className="flex justify-center items-center">
-          <Radio value="가로">
-            <span className="text-[#000] after:content-['가로'] p-2"></span>
-          </Radio>
-        </div>
+      <span className="text-black">Card Direction</span>
+      <Radio.Group onChange={onChange} defaultValue="Vertical">
+        <Radio checked value="Vertical">
+          <span className="text-[#000] p-2">Vertical</span>
+        </Radio>
+        <Radio value="Horizonal">
+          <span className="text-[#000] p-2">Horizonal</span>
+        </Radio>
       </Radio.Group>
     </BoxLayout>
   );

@@ -14,11 +14,14 @@ function ElementBox({
   onClick,
 }: elementBoxProps) {
   return (
-    <div
-      onClick={onClick}
-      className={`w-max min-w-[100px] p-2 rounded-[50px] text-[${textColor}] gap-4 bg-[${bgColor}] cursor-pointer`}
-    >
-      {children}
+    <div className="flex justify-center items-center">
+      <div
+        onClick={onClick}
+        className={`w-max min-w-[60px] p-2 rounded-[50px] cursor-pointer text-center shadow`}
+        style={{ color: textColor, backgroundColor: bgColor }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
