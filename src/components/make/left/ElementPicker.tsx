@@ -37,7 +37,7 @@ function ElementPicker() {
 
   return (
     <BoxLayout bgColor="#fff" margin="40px">
-      <div className="w-full grid grid-cols-4 grid-rows-2 gap-2">
+      <div className="w-full grid grid-cols-3 grid-rows-3 gap-2">
         {elementList.map((element: iElement) => {
           return (
             <ElementBox

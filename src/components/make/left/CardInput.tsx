@@ -33,9 +33,9 @@ function CardInput({ label, text, isColorPicker }: inputLabel) {
       <span className="text-black px-4">{label}</span>
       {!isColorPicker ? (
         <input
+          className="drop-shadow-sm w-[70%] p-1 text-black"
           onChange={onChange}
           value={input}
-          className="w-[70%] p-1 text-black"
         />
       ) : (
         <ColorPicker value={color} onChange={setColor} />

@@ -9,7 +9,7 @@ function ElementInput(props: Props) {
   const elementList = useRecoilValue(rc_elementList);
   return (
     <div
-      className={`w-[80%] h-[36vh] flex flex-col justify-start items-center text-white mx-[40px] my-[20px] p-4 overflow-auto`}
+      className={`w-[80%] h-[30vh] flex flex-col justify-start items-center text-white mx-[40px] p-4 overflow-auto`}
     >
       {elementList.map((e) => (
         <CardInput
