@@ -8,7 +8,7 @@ export default function BusinessCardFront() {
       {/* logo */}
       <div className="flex w-full flex-1 items-center justify-center">
         <Image
-          src="/Bmaker_Logo.svg"
+          src="/images/Bmaker_Logo.svg"
           alt="Bmarker Logo"
           width={0}
           height={0}

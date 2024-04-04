@@ -11,7 +11,7 @@ export default function Home() {
         {/* <BusinessCardFront />
         <BusinessCardBack /> */}
         <Image
-          src="/Bmaker_Logo.svg"
+          src="/images/Bmaker_Logo.svg"
           alt="Bmarker Logo"
           className="dark:invert"
           width={240}
@@ -31,7 +31,7 @@ export default function Home() {
       {/* right */}
       <div className="relative flex w-full flex-[3_3_0%] bg-[#F1E8D6] md:hidden">
         <Image
-          src="/landing_bg.svg"
+          src="/images/landing_bg.svg"
           alt="card_image"
           fill
           style={{ objectFit: "cover" }}
