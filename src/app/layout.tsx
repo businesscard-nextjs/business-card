@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Bmaker",
   description: "Make your own business card",
   icons: {
-    icon: "/Bmaker_Logo.svg",
+    icon: "/images/Bmaker_Logo.svg",
   },
 };
 

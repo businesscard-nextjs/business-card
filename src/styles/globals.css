@@ -94,3 +94,39 @@ body {
 .button.hover-img {
   @apply hover:border hover:bg-main2 hover:text-main3;
 }
+
+/* animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.fadeIn {
+  position: relative;
+  animation: fadeInDown 1.2s;
+}
+
+.fadeIn2 {
+  position: relative;
+  animation: fadeInDown 1.8s;
+}
+
+.cloud {
+  position: relative;
+  animation: ani 1s infinite alternate;
+}
