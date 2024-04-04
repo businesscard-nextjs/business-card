@@ -15,7 +15,7 @@ function ElementInput(props: Props) {
         <CardInput
           text={e.text}
           label={e.label}
-          isColorPicker={e.isColorPicker}
+          color={e.color}
         />
       ))}
     </div>
