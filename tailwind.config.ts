@@ -1,20 +1,20 @@
 import type { Config } from "tailwindcss";
 
-const px0_100 = {
+const px0_100: any = {
   ...Array.from(Array(101)).map((_, index) => {
     return index + `px`;
   }),
 };
-const px0_300 = {
+const px0_300: any = {
   ...Array.from(Array(301)).map((_, index) => {
     return index + `px`;
   }),
 };
-const px0_1000 = {
-  ...Array.from(Array(1001)).map((_, index) => {
-    return index + `px`;
-  }),
-};
+// const px0_1000: any = {
+//   ...Array.from(Array(1001)).map((_, index) => {
+//     return index + `px`;
+//   }),
+// };
 
 const config: Config = {
   // corePlugins: {
@@ -28,15 +28,26 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      xxl: { max: "1400px" },
-      xl: { max: "980px" },
-      lg: { max: "800px" },
-      md: { max: "680px" },
-      sm: { max: "430px" },
+      xxl: { max: "1600px" }, // laptop
+      xl: { max: "1024px" }, // pad -
+      lg: { max: "834px" }, // pad |
+      md: { max: "768px" }, // phone -
+      sm: { max: "480px" }, // phone |
     },
     colors: {
+      // primary
+      main1: "#FDF2DD",
+      main2: "#E6842D",
+      main3: "#130912",
+
+      // basic
       white: "#FFFFFF",
       black: "#000000",
+
+      // gray
+      gray1: "#EEEEEE",
+      gray2: "#CBCBCB",
+
       header: "#488BB1",
       footer: "#4AB148",
     },
@@ -44,19 +55,18 @@ const config: Config = {
       sample: ["Spoqa Han Sans Neo", "sans-serif"],
     },
     backgroundImage: {
-      // sample: "url(../assets/icons/arrow/ico_arrow_down.svg)",
+      landing: "url(../../public/landing_bg_m.svg)",
     },
     boxShadow: {
-      sample: "0px 0px 16px 0px rgba(0, 0, 0, 0.10)",
+      card: "-4px 10px 40px 10px rgba(0, 0, 0, 0.10)",
     },
     extend: {
-      // width: px0_1000,
-      // fontSize: px0_100,
-      // lineHeight: px0_100,
+      fontSize: px0_100,
+      lineHeight: px0_100,
       textAlign: px0_100,
-      // gap: px0_300,
-      // borderRadius: px0_100,
-      // padding: px0_300,
+      gap: px0_300,
+      borderRadius: px0_100,
+      padding: px0_300,
       display: ["group-hover"],
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -65,6 +75,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
 export default config;
