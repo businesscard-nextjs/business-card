@@ -47,6 +47,18 @@ body {
   }
 }
 
+@layer bg-transparent {
+  .bg-transparent {
+    background-color: transparent;
+  }
+}
+
+@layer border-transparent {
+  .border-transparent {
+    border-color: transparent;
+  }
+}
+
 /**
  * button
  **/

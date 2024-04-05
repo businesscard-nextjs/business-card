@@ -12,6 +12,7 @@ export default function BCardWBack() {
         width={0}
         height={0}
         sizes="100vw"
+        priority
         style={{ width: "30%", height: "auto" }} // optional
       />
     </div>
