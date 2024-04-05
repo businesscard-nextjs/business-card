@@ -8,11 +8,12 @@ import { iElement, rc_elementList } from "./leftAtom";
 function ElementPicker() {
   const elementList: iElement[] = [
     { label: "name", text: "", color: "#000" },
-    { label: "background", text: "", color: "#000" },
+    { label: "logo", text: "", color: "#000" },
     { label: "address", text: "", color: "#000" },
-    { label: "company name", text: "", color: "#000" },
+    { label: "office phone", text: "", color: "#000" },
     { label: "phone", text: "", color: "#000" },
     { label: "office name", text: "", color: "#000" },
+    { label: "site", text: "", color: "#000" },
     { label: "position", text: "", color: "#000" },
     { label: "fax", text: "", color: "#000" },
     { label: "email", text: "", color: "#000" },

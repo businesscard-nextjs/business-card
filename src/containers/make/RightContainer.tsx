@@ -2,6 +2,7 @@
 
 import DownloadIcon from "@/src/components/icons/DownloadIcon";
 import BCardWFront from "@/src/components/landing/BCardWFront";
+import BCardWFrontFMake from "@/src/components/landing/BCardWFrontFMake";
 import BCardLFront from "@/src/components/landing/BCardLFront";
 import BCardLBack from "@/src/components/landing/BCardLBack";
 
@@ -34,16 +35,10 @@ export default function RightContainer() {
   }, [ref]);
 
   return (
-    <div className="relative flex w-full flex-1 items-center justify-center p-30">
-      {getCardDirection === "vertical" ? (
-        <div className="flex w-[80%] items-center justify-center">
-          <BCardWFront getRef={ref} />
-        </div>
-      ) : (
-        <div className="flex w-full max-w-[360px] items-center justify-center">
-          <BCardLFront />
-        </div>
-      )}
+    <div className="relative flex w-full flex-1 items-center justify-center bg-gray1 p-30">
+      <div className="flex h-full w-full items-center justify-center">
+        <BCardWFrontFMake getRef={ref} />
+      </div>
       <div
         className="button active big hover absolute bottom-[30px] right-[50px] w-full max-w-[180px] items-center gap-4"
         onClick={downloadImage}
