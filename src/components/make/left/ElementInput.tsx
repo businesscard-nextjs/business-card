@@ -9,14 +9,10 @@ function ElementInput(props: Props) {
   const elementList = useRecoilValue(rc_elementList);
   return (
     <div
-      className={`w-[80%] h-[30vh] flex flex-col justify-start items-center text-white mx-[40px] p-16 overflow-auto`}
+      className={`mx-[40px] flex h-[30vh] w-[80%] flex-col items-center justify-start overflow-auto p-16 text-white`}
     >
-      {elementList.map((e) => (
-        <CardInput
-          text={e.text}
-          label={e.label}
-          color={e.color}
-        />
+      {elementList.map((e, i) => (
+        <CardInput key={i} text={e.text} label={e.label} color={e.color} />
       ))}
     </div>
   );

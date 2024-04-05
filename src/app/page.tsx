@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import BCardWFront from "../components/landing/BCardWFront";
-import BCardWBack from "../components/landing/BCardWBack";
+import LandingRight from "../components/landing/LandingRight";
+
 // import type { NextPage } from "next";
 
 // interface Props {
@@ -30,129 +30,8 @@ const Home = () => {
           </div>
         </Link>
       </div>
-      {/* right */}
-      {/* <div className="relative flex w-full flex-[3_3_0%] bg-[#F1E8D6] bg-landing bg-cover md:hidden">
-        <Image
-          src="/images/landing_bg.svg"
-          alt="card_image"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-        <div className="cloud absolute bottom-[80px] left-[50px] m-auto w-full">
-          <Image
-            src="/images/business-card.svg"
-            alt="business_card"
-            width={500}
-            height={0}
-            // fill
-          />
-        </div>
-      </div> */}
       <div className="relative flex w-full flex-[3_3_0%] overflow-hidden bg-[#F1E8D6] md:hidden">
-        <div className="absolute left-[-150px] top-[-250px] flex flex-col gap-100 ">
-          <div className="flex -rotate-[30deg] gap-50">
-            <Image
-              src="/images/business-card-back.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-back.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-            />
-          </div>
-          <div className="flex -rotate-[30deg] gap-50">
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-back.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-              className="fadeIn shadow-card"
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-          </div>
-          <div className="flex -rotate-[30deg]  gap-50">
-            <Image
-              src="/images/business-card-back.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-              className="fadeIn2 shadow-card"
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-          </div>
-          <div className="flex -rotate-[30deg]  gap-50">
-            <Image
-              src="/images/business-card-back.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-            />
-          </div>
-          <div className="flex -rotate-[30deg]  gap-50">
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-back.svg"
-              alt="business-card-back"
-              width={400}
-              height={0}
-            />
-            <Image
-              src="/images/business-card-front.svg"
-              alt="business_card"
-              width={400}
-              height={0}
-            />
-          </div>
-        </div>
+        <LandingRight />
       </div>
     </main>
   );
