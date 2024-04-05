@@ -1,6 +1,6 @@
 "use client";
 import { ColorPicker, ColorPickerProps, GetProp } from "antd";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { iElement, rc_elementList, rc_imageFile } from "./leftAtom";
 
@@ -80,10 +80,15 @@ function CardInput({ label, text, color }: inputLabel) {
     }
   };
 
-  const onColorChange = (event: ColorPickerProps["value"]) => {
+  const onColorChange = (event: GetProp<ColorPickerProps, "value">) => {
     setElementList((prev: any) => {
       return prev.map((e: iElement) => {
-        return e.label === label ? { ...e, color: event?.toHexString() } : e;
+        return e.label === label
+          ? {
+              ...e,
+              color: typeof event === "string" ? event : event?.toHexString(),
+            }
+          : e;
       });
     });
   };
