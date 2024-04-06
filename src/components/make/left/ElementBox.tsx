@@ -14,10 +14,10 @@ function ElementBox({
   onClick,
 }: elementBoxProps) {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex items-center justify-center">
       <div
         onClick={onClick}
-        className={`w-max min-w-[60px] p-10 rounded-[50px] cursor-pointer text-center shadow`}
+        className={`shadow w-max min-w-[60px] cursor-pointer rounded-50 px-10 py-6 text-center`}
         style={{ color: textColor, backgroundColor: bgColor }}
       >
         {children}
