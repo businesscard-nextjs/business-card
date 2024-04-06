@@ -27,7 +27,7 @@ const BCardWFrontFMake = ({ getRef }: PropsType) => {
   return (
     <div
       ref={getRef}
-      className={`flex bg-white p-20 shadow-card ${getCardDirection === "vertical" ? "aspect-[6/3.4] w-[80%]" : "aspect-[3.4/6] w-[40%] flex-col"}`}
+      className={`flex bg-white shadow-card ${getCardDirection === "vertical" ? "aspect-[6/3.4] w-[80%] px-20 py-30" : "aspect-[3.4/6] w-[40%] flex-col p-20"}`}
     >
       {/* logo */}
       <div className="flex w-full flex-1 items-center justify-center">
