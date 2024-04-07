@@ -59,7 +59,8 @@ const config: Config = {
       landing_m: "url(../../public/images/landing_bg_m.svg)",
     },
     boxShadow: {
-      card: "0px 10px 20px 10px rgba(0, 0, 0, 0.10)",
+      card: "-20px 30px 20px 10px rgba(0, 0, 0, 0.20)",
+      makeCard: "-4px 10px 40px 10px rgba(0, 0, 0, 0.10)",
     },
     extend: {
       fontSize: px0_100,

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function LandingRight() {
   return (
     <div className="absolute left-[-150px] top-[-250px] flex flex-col gap-100 ">
-      <div className="flex -rotate-[30deg] gap-50">
+      <div className="flex -rotate-[28deg] gap-50">
         <Image
           src="/images/business-card-back.svg"
           alt="business-card-back"
@@ -18,7 +18,7 @@ export default function LandingRight() {
           height={0}
         />
       </div>
-      <div className="flex -rotate-[30deg] gap-50">
+      <div className="flex -rotate-[28deg] gap-50">
         <Image
           src="/images/business-card-front.svg"
           alt="business_card"
@@ -30,40 +30,7 @@ export default function LandingRight() {
           alt="business-card-back"
           width={400}
           height={0}
-          className="fadeIn shadow-card"
-        />
-        <Image
-          src="/images/business-card-front.svg"
-          alt="business_card"
-          width={400}
-          height={0}
-        />
-      </div>
-      <div className="flex -rotate-[30deg] gap-50">
-        <Image
-          src="/images/business-card-back.svg"
-          alt="business-card-back"
-          width={400}
-          height={0}
-        />
-        <Image
-          src="/images/business-card-front.svg"
-          alt="business_card"
-          width={400}
-          height={0}
-          className="fadeIn2 shadow-card"
-        />
-        <Image
-          src="/images/business-card-front.svg"
-          alt="business_card"
-          width={400}
-          height={0}
-        />
-        <Image
-          src="/images/business-card-back.svg"
-          alt="business-card-back"
-          width={400}
-          height={0}
+          className="fadeIn right-[-10px] top-[-20px] shadow-card"
         />
         <Image
           src="/images/business-card-front.svg"
@@ -72,7 +39,40 @@ export default function LandingRight() {
           height={0}
         />
       </div>
-      <div className="flex -rotate-[30deg] gap-50">
+      <div className="flex -rotate-[28deg] gap-50">
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+          className="fadeIn2 right-[-10px] top-[-20px] shadow-card"
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-back.svg"
+          alt="business-card-back"
+          width={400}
+          height={0}
+        />
+        <Image
+          src="/images/business-card-front.svg"
+          alt="business_card"
+          width={400}
+          height={0}
+        />
+      </div>
+      <div className="flex -rotate-[28deg] gap-50">
         <Image
           src="/images/business-card-back.svg"
           alt="business-card-back"
@@ -104,7 +104,7 @@ export default function LandingRight() {
           height={0}
         />
       </div>
-      <div className="flex -rotate-[30deg] gap-50">
+      <div className="flex -rotate-[28deg] gap-50">
         <Image
           src="/images/business-card-front.svg"
           alt="business_card"
@@ -136,7 +136,7 @@ export default function LandingRight() {
           height={0}
         />
       </div>{" "}
-      <div className="flex -rotate-[30deg] gap-50">
+      <div className="flex -rotate-[28deg] gap-50">
         <Image
           src="/images/business-card-front.svg"
           alt="business_card"
@@ -168,7 +168,7 @@ export default function LandingRight() {
           height={0}
         />
       </div>
-      <div className="flex -rotate-[30deg] gap-50">
+      <div className="flex -rotate-[28deg] gap-50">
         <Image
           src="/images/business-card-back.svg"
           alt="business-card-back"
