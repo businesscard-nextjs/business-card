@@ -7,16 +7,64 @@ import { iElement, rc_elementList } from "./leftAtom";
 
 function ElementPicker() {
   const elementList: iElement[] = [
-    { label: "name", text: "", color: "#000" },
-    { label: "logo", text: "", color: "#000" },
-    { label: "address", text: "", color: "#000" },
-    { label: "office phone", text: "", color: "#000" },
-    { label: "phone", text: "", color: "#000" },
-    { label: "office name", text: "", color: "#000" },
-    { label: "site", text: "", color: "#000" },
-    { label: "position", text: "", color: "#000" },
-    { label: "fax", text: "", color: "#000" },
-    { label: "email", text: "", color: "#000" },
+    { label: "name", text: "", color: "#000", placeholder: "Name", header: "" },
+    { label: "logo", text: "", color: "#000", placeholder: "", header: "" },
+    {
+      label: "address",
+      text: "",
+      color: "#000",
+      placeholder: "Moraenaro 3gil 11",
+      header: "",
+    },
+    {
+      label: "office phone",
+      text: "",
+      color: "#000",
+      placeholder: "02-0000-0000",
+      header: "Tel.",
+    },
+    {
+      label: "phone",
+      text: "",
+      color: "#000",
+      placeholder: "010-1234-1234",
+      header: "Mobile.",
+    },
+    // {
+    //   label: "office name",
+    //   text: "",
+    //   color: "#000",
+    //   placeholder: "BCard",
+    //   header: "",
+    // },
+    {
+      label: "site",
+      text: "",
+      color: "#000",
+      placeholder: "www.BCard.com",
+      header: "",
+    },
+    {
+      label: "position",
+      text: "",
+      color: "#000",
+      placeholder: "position",
+      header: "",
+    },
+    {
+      label: "fax",
+      text: "",
+      color: "#000",
+      placeholder: "02-0000-0000",
+      header: "Fax.",
+    },
+    {
+      label: "email",
+      text: "",
+      color: "#000",
+      placeholder: "bcard@gmail.com",
+      header: "E-mail.",
+    },
   ];
   const [picked, setPicked] = useRecoilState<iElement[]>(rc_elementList);
 

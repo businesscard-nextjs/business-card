@@ -1,22 +1,21 @@
 "use client";
 
 import DownloadIcon from "@/src/components/icons/DownloadIcon";
-import BCardWFront from "@/src/components/landing/BCardWFront";
-import BCardWFrontFMake from "@/src/components/landing/BCardWFrontFMake";
-import BCardLFront from "@/src/components/landing/BCardLFront";
-import BCardLBack from "@/src/components/landing/BCardLBack";
-
-import { useRecoilValue } from "recoil";
-import { rc_direction } from "@/src/components/make/left/leftAtom";
-import React, { useCallback, useRef } from "react";
+import BCardWFrontLayout1 from "@/src/components/make/right/BCardWFrontLayout1";
+import BCardWFrontLayout2 from "@/src/components/make/right/BCardWFrontLayout2";
+import BCardWFrontLayout3 from "@/src/components/make/right/BCardWFrontLayout3";
+// import BCardLBack from "@/src/components/landing/BCardLBack";
+import { Radio } from "antd";
+import BoxLayout from "@/src/components/make/left/BoxLayout";
+import React, { useCallback, useRef, useState } from "react";
 import { toPng } from "html-to-image";
 
 export default function RightContainer() {
   const ref = useRef<HTMLDivElement>(null);
 
-  const getCardDirection = useRecoilValue(rc_direction);
+  const [layout, setLayout] = useState("layout1");
 
-  //image download function
+  // 이미지 다운로드 기능
   const downloadImage = useCallback(() => {
     if (ref.current === null) {
       return;
@@ -35,10 +34,40 @@ export default function RightContainer() {
   }, [ref]);
 
   return (
-    <div className="relative flex w-full flex-1 items-center justify-center bg-gray1 p-30">
-      <div className="flex h-full w-full items-center justify-center">
-        <BCardWFrontFMake getRef={ref} />
+    <div className="relative flex w-full flex-1 flex-col items-center gap-20 bg-gray1 px-30 pb-30 pt-40">
+      {/* 레이아웃 선택 */}
+      <BoxLayout margin="0 20px" bgColor="#fff">
+        <span className="text-main3">Select Layout</span>
+        <Radio.Group
+          onChange={(e) => setLayout(e.target.value)}
+          defaultValue="layout1"
+        >
+          <Radio checked value="layout1" className="text-main3">
+            layout1
+          </Radio>
+          <Radio value="layout2" className="text-main3">
+            layout2
+          </Radio>
+          <Radio value="layout3" className="text-main3">
+            layout3
+          </Radio>
+        </Radio.Group>
+      </BoxLayout>
+
+      {/* 카드 샘플 */}
+      <div className="absolute bottom-0 left-0 right-0 top-0 m-auto h-[65%] w-[80%]">
+        <div className="flex h-full w-full items-center justify-center">
+          {layout === "layout1" ? (
+            <BCardWFrontLayout1 getRef={ref} />
+          ) : layout === "layout2" ? (
+            <BCardWFrontLayout2 getRef={ref} />
+          ) : (
+            <BCardWFrontLayout3 getRef={ref} />
+          )}
+        </div>
       </div>
+
+      {/* 다운로드 버튼 */}
       <div
         className="button active big hover absolute bottom-[30px] right-[50px] w-full max-w-[180px] items-center gap-4"
         onClick={downloadImage}
