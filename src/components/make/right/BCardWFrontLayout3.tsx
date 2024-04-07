@@ -41,7 +41,7 @@ const BCardWFrontLayout3 = ({ getRef }: PropsType) => {
   return (
     <div
       ref={getRef}
-      className={`flex flex-col bg-white shadow-makeCard ${getCardDirection === "vertical" ? "aspect-[6/3.4] w-full px-20 py-30" : "aspect-[3.4/6] h-full w-[50%] p-20"}`}
+      className={`flex flex-col bg-white shadow-makeCard ${getCardDirection === "vertical" ? "aspect-[6/3.4] w-full p-30" : "aspect-[3.4/6] h-full w-[50%] p-20"}`}
     >
       {/* 회사 로고 */}
       <div className="flex w-full flex-1 items-start justify-end">

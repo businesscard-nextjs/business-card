@@ -29,7 +29,7 @@ const BCardWFrontLayout2 = ({ getRef }: PropsType) => {
   return (
     <div
       ref={getRef}
-      className={`flex bg-white shadow-makeCard ${getCardDirection === "vertical" ? "aspect-[6/3.4] w-full px-20 py-30" : "aspect-[3.4/6] h-full w-[50%] flex-col p-20"}`}
+      className={`flex bg-white shadow-makeCard ${getCardDirection === "vertical" ? "aspect-[6/3.4] w-full p-30" : "aspect-[3.4/6] h-full w-[50%] flex-col p-20"}`}
     >
       {/* 카드 정보 */}
       <div
