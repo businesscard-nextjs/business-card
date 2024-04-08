@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <main className="flex h-screen w-full md:flex-col">
       {/* left */}
-      <div className="md:object-fit md:bg-landing_m flex flex-[1.5_1.5_0%] flex-col items-center justify-center gap-80 bg-main1 p-30 md:bg-cover">
+      <div className="md:object-fit flex flex-[1.5_1.5_0%] flex-col items-center justify-center gap-80 bg-main1 p-30 md:bg-landing_m md:bg-cover">
         <Image
           src="/images/Bmaker_Logo.svg"
           alt="Bmarker Logo"
