@@ -5,14 +5,16 @@ import { InboxOutlined } from "@ant-design/icons";
 import type { GetProp, UploadFile, UploadProps } from "antd";
 import { message, Upload } from "antd";
 import ImgCrop from "antd-img-crop";
-import { useState } from "react";
+import InputCard from "./InputCard";
 
 const ALLOW_FILE_EXTENSION = "jpg, jpeg, png";
 const FILE_SIZE_MAX_LIMIT = 5 * 1024 * 1024; // 5MB
 type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
 
 export default function LogoNav() {
-  const [logoImageFile, setLogoImageFile] = useRecoilState<File>(rc_logoFile);
+  const [logoImageFile, setLogoImageFile] = useRecoilState<File | undefined>(
+    rc_logoFile,
+  );
 
   // drag&drop 이미지 파일
   const { Dragger } = Upload;
@@ -62,6 +64,12 @@ export default function LogoNav() {
     onDrop(e) {
       console.log("Dropped files", e.dataTransfer.files);
     },
+    onRemove(e: any) {
+      if (e) {
+        console.log("222", e);
+        setLogoImageFile(undefined);
+      }
+    },
   };
 
   return (
@@ -86,21 +94,9 @@ export default function LogoNav() {
 
       {/* 회사명 - 추가기능 */}
       {/* <div className="flex flex-col gap-24">
-        <div className="text-20 text-main3">Layouts</div>
-        <Radio.Group
-          onChange={(e) => setLayout(e.target.value)}
-          defaultValue="layout1"
-        >
-          <Radio checked value="layout1">
-            <span className="text-main3">layout1</span>
-          </Radio>
-          <Radio value="layout2">
-            <span className="text-main3">layout2</span>
-          </Radio>
-          <Radio value="layout3">
-            <span className="text-main3">layout3</span>
-          </Radio>
-        </Radio.Group>
+        <InputCard
+          element={{ label: "Company name", text: "", color: "#000" }}
+        />
       </div> */}
     </div>
   );

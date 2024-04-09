@@ -84,7 +84,7 @@ const BCardWFrontLayout2 = ({ getRef }: PropsType) => {
           width={0}
           height={0}
           priority
-          style={{ width: "40%", height: "auto" }} // optional
+          style={{ width: "30%", height: "auto" }} // optional
         />
       </div>
     </div>

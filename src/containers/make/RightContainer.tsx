@@ -4,7 +4,7 @@ import DownloadIcon from "@/src/components/icons/DownloadIcon";
 import BCardWFrontLayout1 from "@/src/components/make/right/BCardWFrontLayout1";
 import BCardWFrontLayout2 from "@/src/components/make/right/BCardWFrontLayout2";
 import BCardWFrontLayout3 from "@/src/components/make/right/BCardWFrontLayout3";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef } from "react";
 import { toPng } from "html-to-image";
 import { useRecoilValue } from "recoil";
 import { rc_layout } from "@/src/components/make/left/leftAtom";
@@ -13,7 +13,6 @@ export default function RightContainer() {
   const ref = useRef<HTMLDivElement>(null);
 
   const getLayout = useRecoilValue(rc_layout);
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   // 이미지 다운로드 기능
   const downloadImage = useCallback(() => {

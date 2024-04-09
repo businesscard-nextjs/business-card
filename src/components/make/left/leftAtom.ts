@@ -56,7 +56,7 @@ export const rc_imageFile = atom<File>({
 });
 
 // 명함 로고 파일
-export const rc_logoFile = atom<File>({
+export const rc_logoFile = atom<File | undefined>({
   key: "rc_logo_file",
   default: undefined,
 });
