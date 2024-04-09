@@ -9,6 +9,7 @@ import LayoutNav from "@/src/components/make/left/nav/LayoutNav";
 import LogoNav from "@/src/components/make/left/nav/LogoNav";
 import TextNav from "@/src/components/make/left/nav/TextNav";
 import ColorNav from "@/src/components/make/left/nav/ColorNav";
+import NavBox from "@/src/components/make/left/nav/NavBox";
 
 interface NavItem {
   nav: string;
@@ -60,43 +61,32 @@ function LeftContainer() {
         <div className="flex w-full flex-col items-center gap-30">
           {navList.map((nav, i) => {
             return (
-              <div
-                onClick={() => setSelectNav(nav.nav)}
-                key={`navList-${i}`}
-                className={`flex h-[48px] w-[48px] cursor-pointer flex-col items-center justify-center rounded-10 ${selectNav === nav.nav ? "shadow-layoutNav border border-main2" : ""}`}
-              >
-                <div>
-                  {React.cloneElement(nav.icon, {
-                    color: selectNav === nav.nav ? "#E6842D" : "#130912",
-                  })}
-                </div>
-                <div
-                  className={`text-12 font-semibold ${selectNav === nav.nav ? "text-main2" : "text-main3"}`}
-                >
-                  {nav.nav}
-                </div>
+              <div onClick={() => setSelectNav(nav.nav)} key={`navBox-${i}`}>
+                <NavBox nav={nav} selectNav={selectNav} />
               </div>
             );
           })}
         </div>
       </div>
       {/* nav별 커스텀 화면 */}
-      {navList.map((nav, i) =>
-        nav.nav === selectNav ? (
-          <div
-            key={`navLayout-${i}`}
-            className="flex h-full w-full flex-col gap-50 p-20"
-          >
-            <div className="flex w-full flex-col gap-2 border-b border-b-main3 py-14">
-              <div className="text-24 font-semibold text-main3">
-                {nav.title}
+      <div className="flex h-full w-full p-20">
+        {navList.map((nav, i) =>
+          nav.nav === selectNav ? (
+            <div
+              className="flex h-full w-full flex-col gap-50"
+              key={`navLayout-${i}`}
+            >
+              <div className="flex w-full flex-col gap-2 border-b border-b-main3 py-14">
+                <div className="text-24 font-semibold text-main3">
+                  {nav.title}
+                </div>
+                <div className="text-14 text-main3">{nav.subtitle}</div>
               </div>
-              <div className="text-14 text-main3">{nav.subtitle}</div>
+              {nav.compo}
             </div>
-            {nav.compo}
-          </div>
-        ) : null,
-      )}
+          ) : null,
+        )}
+      </div>
     </div>
   );
 }

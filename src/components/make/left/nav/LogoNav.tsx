@@ -66,7 +66,6 @@ export default function LogoNav() {
     },
     onRemove(e: any) {
       if (e) {
-        console.log("222", e);
         setLogoImageFile(undefined);
       }
     },

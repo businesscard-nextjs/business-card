@@ -1,5 +1,5 @@
 "use client";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { rc_direction, rc_layout } from "@/src/components/make/left/leftAtom";
 import { Radio } from "antd";
 
@@ -14,7 +14,7 @@ export default function LayoutNav() {
         <div className="text-20 text-main3">Direction</div>
         <Radio.Group
           onChange={(e) => setDirection(e.target.value)}
-          defaultValue="vertical"
+          defaultValue={direction}
         >
           <Radio checked value="vertical">
             <span className="text-main3">Vertical</span>
@@ -30,7 +30,7 @@ export default function LayoutNav() {
         <div className="text-20 text-main3">Layouts</div>
         <Radio.Group
           onChange={(e) => setLayout(e.target.value)}
-          defaultValue="layout1"
+          defaultValue={layout}
         >
           <Radio checked value="layout1">
             <span className="text-main3">layout1</span>
