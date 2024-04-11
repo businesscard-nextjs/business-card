@@ -13,9 +13,9 @@ interface PropsType {
 const BCardInfo = ({ info }: PropsType) => {
   return (
     <>
-      {info?.label !== "name" &&
-      info?.label !== "position" &&
-      info?.label !== "logo" ? (
+      {info?.label !== "Name" &&
+      info?.label !== "Position" &&
+      info?.label !== "Logo" ? (
         <div
           className="text-14"
           style={{

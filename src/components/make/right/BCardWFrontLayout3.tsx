@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import {
   rc_direction,
   rc_elementList,
+  rc_logoFile,
 } from "@/src/components/make/left/leftAtom";
 import BCardInfo from "./BCardInfo";
 
@@ -16,6 +17,7 @@ interface PropsType {
 const BCardWFrontLayout3 = ({ getRef }: PropsType) => {
   const getCardInfo = useRecoilValue(rc_elementList);
   const getCardDirection = useRecoilValue(rc_direction);
+  const getCardLogoImage = useRecoilValue(rc_logoFile);
 
   // 카드 정보 가져오기
   const cardInfo = (label: string) => {
@@ -36,8 +38,6 @@ const BCardWFrontLayout3 = ({ getRef }: PropsType) => {
     );
   };
 
-  console.log("layoutCardInfo", layoutCardInfo());
-
   return (
     <div
       ref={getRef}
@@ -46,13 +46,16 @@ const BCardWFrontLayout3 = ({ getRef }: PropsType) => {
       {/* 회사 로고 */}
       <div className="flex w-full flex-1 items-start justify-end">
         <Image
-          src="/images/Bmaker_Logo_g.svg"
+          src={
+            getCardLogoImage !== undefined
+              ? URL.createObjectURL(getCardLogoImage)
+              : "/images/Bmaker_Logo_g.svg"
+          }
           alt="Bmarker Logo"
           width={0}
           height={0}
-          sizes="100vw"
           priority
-          style={{ width: "70px", height: "auto" }} // optional
+          style={{ width: "68.5px", height: "auto" }} // optional
         />
       </div>
       {/* 카드 정보 */}
@@ -64,24 +67,24 @@ const BCardWFrontLayout3 = ({ getRef }: PropsType) => {
           <div
             className="text-24 font-semibold"
             style={{
-              color: cardInfo("name")?.text.length
-                ? cardInfo("name")?.color
+              color: cardInfo("Name")?.text.length
+                ? cardInfo("Name")?.color
                 : "#CBCBCB",
             }}
           >
-            {cardInfo("name")?.text?.length ? cardInfo("name")?.text : "Name"}
+            {cardInfo("Name")?.text?.length ? cardInfo("Name")?.text : "Name"}
           </div>
           {/* position */}
           <div
             className="text-16"
             style={{
-              color: cardInfo("position")?.text.length
-                ? cardInfo("position")?.color
+              color: cardInfo("Position")?.text.length
+                ? cardInfo("Position")?.color
                 : "#CBCBCB",
             }}
           >
-            {cardInfo("position")?.text?.length
-              ? cardInfo("position")?.text
+            {cardInfo("Position")?.text?.length
+              ? cardInfo("Position")?.text
               : "position"}
           </div>
         </div>

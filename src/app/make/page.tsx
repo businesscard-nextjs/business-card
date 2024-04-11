@@ -1,4 +1,4 @@
-import LeftContainer from "@/src/components/make/left/LeftContainer";
+import LeftContainer from "@/src/containers/make/LeftContainer";
 import RightContainer from "@/src/containers/make/RightContainer";
 import React from "react";
 
