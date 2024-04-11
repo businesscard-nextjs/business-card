@@ -61,6 +61,9 @@ const config: Config = {
     boxShadow: {
       card: "-20px 30px 20px 10px rgba(0, 0, 0, 0.20)",
       makeCard: "-4px 10px 40px 10px rgba(0, 0, 0, 0.10)",
+      makeNav: "4px 0px 14px 0px rgba(0, 0, 0, 0.08)",
+      layoutNav: "0px 2px 10px 0px rgba(231, 121, 23, 0.4)",
+      optionCard: "0px 0px 10px 0px rgba(0, 0, 0, 0.10)",
     },
     extend: {
       fontSize: px0_100,
